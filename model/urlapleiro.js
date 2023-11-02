@@ -17,4 +17,17 @@ export const urlapLeiro = {
     },
     validalas: "1000 és 2023 között kell legyen a szám!"
   },
+  datum: {
+    megjelenes: "Dátum",
+    tipus: "date",
+    value: ""
+  },
+  email: {
+    megjelenes: "Email",
+    tipus: "email",
+    value: "",
+    placeholder: "valaki@gmail.com",
+    regex: "^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$",
+    validalas: "Az email címet @ jellel irjuk pl.: valaki@gmail.com"
+  }
 };

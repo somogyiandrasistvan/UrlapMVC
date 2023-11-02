@@ -1,10 +1,11 @@
-import TextUrlapElem from "./TextUrlapElem.js";
-import NumberUrlapElem from "./NumberUrlapElem.js";
+import TextUrlapElem from "./urlapElemek/TextUrlapElem.js";
+import NumberUrlapElem from "./urlapElemek/TextUrlapElem.js";
+import DateUrlapElem from "./urlapElemek/DateUrlapElem.js";
+import EmailUrlapElem from "./urlapElemek/EmailUrlapElem.js";
 
 class UrlapView {
   #leiro = {};
   #urlapElemLista = [];
-  #urlapNumberLista = [];
   #osszesElemValidE = true;
   #urlapAdat = {};
   constructor(szuloElem, leiro) {
@@ -46,6 +47,12 @@ class UrlapView {
           break;
         case "number":
             this.#urlapElemLista.push(new NumberUrlapElem(key, this.#leiro[key], this.formElem));
+          break;
+        case "date":
+            this.#urlapElemLista.push(new DateUrlapElem(key, this.#leiro[key], this.formElem));
+          break;
+        case "email":
+          this.#urlapElemLista.push(new EmailUrlapElem(key, this.#leiro[key], this.formElem))
           break;
         default:
       }
